@@ -27,6 +27,7 @@ import {
   Tag,
   Select,
   Option,
+  Cascader,
   Tree
 } from 'element-ui'
 
@@ -56,6 +57,7 @@ Vue.use(Tag)
 Vue.use(Tree)
 Vue.use(Select)
 Vue.use(Option)
+Vue.use(Cascader)
 
 // 不能这样操作Message和MessageBox
 // Vue.use(Message)
