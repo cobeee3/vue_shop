@@ -28,6 +28,9 @@ import {
   Select,
   Option,
   Cascader,
+  Alert,
+  Tabs,
+  TabPane,
   Tree
 } from 'element-ui'
 
@@ -58,6 +61,9 @@ Vue.use(Tree)
 Vue.use(Select)
 Vue.use(Option)
 Vue.use(Cascader)
+Vue.use(Alert)
+Vue.use(Tabs)
+Vue.use(TabPane)
 
 // 不能这样操作Message和MessageBox
 // Vue.use(Message)

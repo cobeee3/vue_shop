@@ -6,8 +6,11 @@ import axios from 'axios'
 import './assets/fonts/iconfont.css'
 import 'default-passive-events'
 import TreeTable from 'vue-table-with-tree-grid'
+import Bcrumb from '@/components/common/Bcrumb'
 Vue.use(TreeTable)
+Vue.use(Bcrumb)
 Vue.component('tree-table', TreeTable)
+Vue.component('BcrumbT', Bcrumb)
 
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
 axios.interceptors.request.use((config) => {

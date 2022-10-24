@@ -1,10 +1,9 @@
 <template>
   <div>
-    <el-breadcrumb separator-class="el-icon-arrow-right">
-      <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>商品管理</el-breadcrumb-item>
-      <el-breadcrumb-item>商品分类</el-breadcrumb-item>
-    </el-breadcrumb>
+    <BcrumbT>
+      <template v-slot:title1>商品管理</template>
+      <template v-slot:title2>商品分类</template>
+    </BcrumbT>
     <el-card>
       <el-row :gutter="10">
         <el-col :span="6">
@@ -166,7 +165,6 @@ export default {
     },
     async getCateList() {
       const { data: res } = await this.$http.get('categories', { params: this.queryInfo })
-      console.log(res)
       if (res.meta.status !== 200) return this.$message.error('获取分类列表失败，亲！')
       this.cateList = res.data.result
       this.total = res.data.total
@@ -177,7 +175,6 @@ export default {
     },
     async getParentCateList() {
       const { data: res } = await this.$http.get('categories', { params: { type: 2 } })
-      console.log(res)
       if (res.meta.status !== 200) return this.$message.error('获取父级分类失败，亲！')
       this.parentCateList = res.data
     },
@@ -191,7 +188,6 @@ export default {
       this.$refs.addDialogRef.validate(async (valid) => {
         if (valid) {
           const { data: res } = await this.$http.post('categories', this.addCateDialogForm)
-          console.log(res)
           if (res.meta.status !== 201) return this.$message.error('添加分类失败，亲！')
           this.$message.success('添加分类成功')
           this.getCateList()
