@@ -1,9 +1,22 @@
-html, body, #app{
+html,
+body,
+#app {
     height: 100%;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     min-width: 1366px;
 }
-.el-breadcrumb{
+
+.el-breadcrumb {
     margin-bottom: 15px;
-  }
+}
+
+.el-step {
+    margin: 15px 0;
+}
+.el-step__title {
+    font-size: 13px;
+}
+.ql-editor{
+    min-height: 300px;
+}

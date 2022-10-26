@@ -31,6 +31,12 @@ import {
   Alert,
   Tabs,
   TabPane,
+  Steps,
+  Step,
+  Checkbox,
+  CheckboxButton,
+  CheckboxGroup,
+  Upload,
   Tree
 } from 'element-ui'
 
@@ -64,6 +70,12 @@ Vue.use(Cascader)
 Vue.use(Alert)
 Vue.use(Tabs)
 Vue.use(TabPane)
+Vue.use(Steps)
+Vue.use(Step)
+Vue.use(Upload)
+Vue.use(Checkbox)
+Vue.use(CheckboxButton)
+Vue.use(CheckboxGroup)
 
 // 不能这样操作Message和MessageBox
 // Vue.use(Message)

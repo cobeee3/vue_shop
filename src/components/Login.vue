@@ -53,7 +53,6 @@ export default {
           this.$message.error('登陆失败！')
         } else {
           this.$message.success('登陆成功，亲！')
-          console.log(res)
           sessionStorage.setItem('TOKEN', res.data.token)
           this.$router.push('/home')
         }
