@@ -11,6 +11,7 @@ import Params from '@/components/goods/Params'
 import Parent from '@/components/test1/Parent'
 import GoodsList from '@/components/goods/List'
 import GoodsAdd from '@/components/goods/Add'
+import Orders from '@/components/order/Order'
 
 Vue.use(VueRouter)
 Vue.filter('dateFormat', function (oringinVal) {
@@ -76,6 +77,10 @@ const routes = [
       {
         path: '/goods/add',
         component: GoodsAdd
+      },
+      {
+        path: '/orders',
+        component: Orders
       }
     ]
   }
